@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивті Портфолио</title>
+    <style>
+        /* Негізгі стильдер */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            position: fixed;
+            top: 100px;
+            width: 100%;
+            z-index: 999;
+            text-align: center;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            text-align: center;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        #about {
+            background-image: url('https://example.com/your-image-about.jpg');
+        }
+        #skills {
+            background-image: url('https://example.com/your-image-skills.jpg');
+        }
+        #projects {
+            background-image: url('https://example.com/your-image-projects.jpg');
+        }
+        #achievements {
+            background-image: url('https://example.com/your-image-achievements.jpg');
+        }
+        #contact {
+            background-image: url('https://example.com/your-image-contact.jpg');
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p, ul {
+            font-size: 1.3em;
+            line-height: 1.6em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 15px 0;
+        }
+        .statistics {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-item h3 {
+            font-size: 3em;
+            margin: 0;
+            color: #007bff;
+        }
+        .stat-item p {
+            font-size: 1.2em;
+        }
+        footer {
+            background-color: #000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Жүгіртпе анимациясы */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Параллакс эффектілері */
+        .parallax {
+            position: relative;
+            z-index: 1;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Интерактивті Портфолио</h1>
+    </header>
+
+    <nav>
+        <a href="#about">Өзім туралы</a>
+        <a href="#skills">Дағдылар</a>
+        <a href="#projects">Жобалар</a>
+        <a href="#achievements">Жетістіктер</a>
+        <a href="#contact">Байланыс</a>
+    </nav>
+
+    <section id="about" class="section parallax">
+        <h2>Өзім туралы</h2>
+        <img src='avatar.jpg' alt="Профиль суреті" style="border-radius: 70%; width: 150px; height: 150px;">
+        <p>Мен Амирхан, программист, математик, аналитик және веб-әзірлеушімін. Менің мақсатым - тиімді және креативті шешімдер ұсыну арқылы клиенттеріме көмек көрсету.</p>
+    </section>
+
+    <section id="skills" class="section parallax">
+        <h2>Дағдылар</h2>
+        <ul>
+            <li>Математикалық талдау</li>
+            <li>Деректерді визуализациялау</li>
+            <li>Python, C#, Java, C++ бағдарламалау</li>
+            <li>Машиналық оқыту</li>
+            <li>Веб-қосымшалар әзірлеу (HTML, CSS, JavaScript)</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section parallax">
+        <h2>Жобалар</h2>
+        <p>Мен жасаған жобалар:</p>
+        <ul>
+            <li>Веб-сайт [Жоба 1] - [Жобаның]</li>
+            <li>Мобильді қосымша [Жоба 2] - [Жобаның]</li>
+            <li>Аналитикалық құрал [Жоба 3] - [Жобаның]</li>
+        </ul>
+    </section>
+
+    <section id="achievements" class="section parallax">
+        <h2>Жетістіктер</h2>
+        <div class="statistics">
+            <div class="stat-item">
+                <h3 id="projectsCompleted">0</h3>
+                <p>Аяқталған жобалар</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="clients">0</h3>
+                <p>Клиенттер</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="awards">0</h3>
+                <p>Сыйлықтар</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section parallax">
+        <h2>Байланыс</h2>
+        <p>Сіз маған мына электрондық пошта арқылы хабарласа аласыз: Amirkhantemirov04@gmail.com</p>
+        <p>Немесе төмендегі картаны пайдаланып, орналасқан жеріңізді табыңыз:</p>
+        <div id="map" style="width: 100%; height: 400px; background-color: #f0f0f0;"></div>
+    </section>
+
+    <footer>
+        <p>© 2024 Амирхан. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // Жетістіктер санын анимациялау
+        document.addEventListener("DOMContentLoaded", function() {
+            animateValue("projectsCompleted", 0, 25, 3000);
+            animateValue("clients", 0, 150, 3000);
+            animateValue("awards", 0, 10, 3000);
+        });
+
+        function animateValue(id, start, end, duration) {
+            let obj = document.getElementById(id);
+            let range = end - start;
+            let current = start;
+            let increment = end > start ? 1 : -1;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            let timer = setInterval(function() {
+                current += increment;
+                obj.innerHTML = current;
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Жергілікті картаны көрсету (Google Maps API орнына макет)
+        function initMap() {
+            var map = document.getElementById('map');
+            map.innerHTML = "Карта жүктелді.";
+        }
+        initMap();
+    </script>
+
+</body>
+</html>
